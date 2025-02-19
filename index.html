@@ -1,256 +1,137 @@
-/* styles.css (create this in your root folder) */
-:root {
-    --olive: #556B2F;
-    --light-olive: #6B8E23;
-    --cream: #FFFFF0;
-}
+import React from 'react';
 
-body {
-    margin: 0;
-    font-family: 'Cormorant Garamond', serif;
-    background-color: var(--cream);
-    color: var(--olive);
-    line-height: 1.6;
-}
+const ArtPortfolioPreview = () => {
+  return (
+    <div className="font-serif bg-[#FAFAFA] text-[#3C4A3E]">
+      {/* Navigation */}
+      <nav className="bg-[#556B2F] text-[#FFFFF0] py-4">
+        <div className="max-w-6xl mx-auto px-4 flex justify-between items-center">
+          <span className="font-['Abril_Fatface'] text-xl">Ava</span>
+          <ul className="flex gap-8 font-sans">
+            <li className="hover:opacity-80">Home</li>
+            <li className="hover:opacity-80">Gallery</li>
+            <li className="hover:opacity-80">About</li>
+            <li className="hover:opacity-80">Contact</li>
+          </ul>
+        </div>
+      </nav>
 
-header {
-    background-color: var(--olive);
-    color: var(--cream);
-    padding: 2rem;
-    text-align: center;
-}
+      {/* Profile Section */}
+      <section className="relative flex flex-col md:flex-row items-center p-8 md:p-24 bg-gradient-to-br from-[#556B2F] to-[#3C4A3E] text-[#FFFFF0] overflow-hidden">
+        {/* Profile Image */}
+        <img 
+          src="/api/placeholder/240/240" 
+          alt="Ava Hyland" 
+          className="w-48 h-48 md:w-60 md:h-60 rounded-full border-4 border-[#8DA290] mb-8 md:mb-0 md:mr-16 object-cover shadow-lg z-10"
+        />
+        
+        {/* Profile Content */}
+        <div className="relative z-10 max-w-2xl text-center md:text-left">
+          <h1 className="font-['Abril_Fatface'] text-4xl md:text-6xl mb-6 text-[#FFFFF0]">
+            Welcome to My Portfolio
+          </h1>
+          <p className="text-lg leading-relaxed opacity-90 font-sans">
+            Illustrator and visual artist specializing in creating vibrant and meaningful visual narratives. My work combines traditional techniques with digital innovation, bringing stories to life through careful attention to detail and emotional depth.
+          </p>
+        </div>
+      </section>
 
-nav {
-    padding: 1rem;
-    background-color: var(--light-olive);
-}
+      {/* Featured Works Title */}
+      <div className="text-center pt-16 pb-8">
+        <h2 className="font-['Abril_Fatface'] text-3xl text-[#556B2F]">Featured Works</h2>
+      </div>
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-nav a {
-    color: var(--cream);
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: opacity 0.3s;
-}
-
-nav a:hover {
-    opacity: 0.8;
-}
-
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.gallery img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border: 2px solid var(--olive);
-}
-
-article {
-    margin-bottom: 3rem;
-}
-
-h1, h2, h3 {
-    color: var(--olive);
-}
-
-footer {
-    background-color: var(--olive);
-    color: var(--cream);
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
-.portfolio-item {
-    border: 1px solid var(--olive);
-    padding: 1rem;
-    margin-bottom: 2rem;
-}
-
-/* index.html */
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ava's Illustration Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <h1>Ava</h1>
-        <p>Illustrator & Visual Artist</p>
-        <nav>
-            <ul>
-                <li><a href="index.html">Gallery</a></li>
-                <li><a href="about/about.html">About</a></li>
-                <li><a href="resume/resume.html">Portfolio</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <article>
-            <h2>Featured Works</h2>
-            <div class="gallery">
-                <img src="images/placeholder1.jpg" alt="Illustration piece 1">
-                <img src="images/placeholder2.jpg" alt="Illustration piece 2">
-                <img src="images/placeholder3.jpg" alt="Illustration piece 3">
-                <img src="images/placeholder4.jpg" alt="Illustration piece 4">
+      {/* Art Grid */}
+      <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
+        {artItems.map((item, index) => (
+          <div 
+            key={index} 
+            className="group relative overflow-hidden rounded-lg shadow-lg hover:-translate-y-1 transition-transform duration-300"
+          >
+            <img 
+              src={`/api/placeholder/400/300`} 
+              alt={item.title}
+              className="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <span className="text-sm text-[#8DA290] uppercase tracking-wider font-semibold font-sans">
+                  {item.category}
+                </span>
+                <h3 className="text-lg font-bold mt-1 mb-1 text-[#FFFFF0] font-sans">
+                  {item.title}
+                </h3>
+                <p className="text-[#FFFFF0]/90 text-sm font-sans">
+                  {item.description}
+                </p>
+              </div>
             </div>
-        </article>
-    </main>
+          </div>
+        ))}
+      </section>
 
-    <footer>
-        <p>&copy; 2025 Ava's Illustration Portfolio. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+      {/* View More Button */}
+      <div className="text-center py-12">
+        <button className="bg-[#556B2F] text-[#FFFFF0] px-8 py-3 rounded-lg font-sans hover:bg-[#3C4A3E] transition-colors duration-300">
+          View Full Gallery
+        </button>
+      </div>
 
-/* about/about.html */
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Ava's Illustration Portfolio</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <h1>About Me</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Gallery</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="../resume/resume.html">Portfolio</a></li>
-            </ul>
-        </nav>
-    </header>
+      {/* Footer */}
+      <footer className="bg-[#556B2F] text-[#FFFFF0] text-center py-8 font-sans mt-16">
+        <p>© 2025 Ava | Illustrator & Visual Artist</p>
+        <p>Contact: your.email@example.com</p>
+      </footer>
+    </div>
+  );
+};
 
-    <main>
-        <article>
-            <section>
-                <h2>My Artistic Journey</h2>
-                <p>As an <strong>illustrator</strong>, I focus on creating vibrant and meaningful visual narratives. My work combines traditional techniques with digital innovation, bringing stories to life through careful attention to detail and emotional depth.</p>
-            </section>
+const artItems = [
+  {
+    category: "Art Piece 1",
+    title: "Series 1",
+    description: "Add description here"
+  },
+  {
+    category: "Art Piece 2",
+    title: "Series 2",
+    description: "Add description here"
+  },
+  {
+    category: "Art piece 3",
+    title: "Series 3",
+    description: "Add description here"
+  },
+  {
+    category: "Art piece 4",
+    title: "Series 4",
+    description: "Add description here"
+  },
+  {
+    category: "Art piece 5",
+    title: "Series 5",
+    description: "Add description here"
+  },
+  {
+    category: "Art Piece 6",
+    title: "Series 6",
+    description: "Add description here"
+  },
+  {
+    category: "Art piece 7",
+    title: "Series 7",
+    description: "Add description here"
+  },
+  {
+    category: "Art piece 8",
+    title: "Series 8",
+    description: "Add description here"
+  },
+  {
+    category: "Art piece 9",
+    title: "Series 9",
+    description: "Add art piece here"
+  }
+];
 
-            <section>
-                <h2>Artistic Philosophy</h2>
-                <p>I believe in the power of <em>visual storytelling</em> to connect, inspire, and transform. Each piece I create aims to capture a moment, emotion, or story that resonates with viewers on a personal level.</p>
-            </section>
-
-            <section>
-                <h2>Medium & Style</h2>
-                <p>My illustrations blend traditional and digital techniques, with a particular focus on color theory and composition. I specialize in creating detailed, narrative-driven pieces that invite viewers to explore and interpret.</p>
-            </section>
-        </article>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Ava's Illustration Portfolio. All rights reserved.</p>
-    </footer>
-</body>
-</html>
-
-/* resume/resume.html */
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Ava's Illustration Work</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <h1>Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Gallery</a></li>
-                <li><a href="../about/about.html">About</a></li>
-                <li><a href="resume.html">Portfolio</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <article>
-            <section>
-                <h2>Artistic Skills</h2>
-                <ul>
-                    <li>Digital Illustration</li>
-                    <li>Traditional Media (Watercolor, Ink)</li>
-                    <li>Character Design</li>
-                    <li>Editorial Illustration</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Featured Projects</h2>
-                <ol>
-                    <li>
-                        <div class="portfolio-item">
-                            <h3>Children's Book Series</h3>
-                            <p>2023-Present: Lead illustrator for "Adventures in Wonderland" series</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="portfolio-item">
-                            <h3>Editorial Illustrations</h3>
-                            <p>2021-2023: Regular contributor to "The Creative Magazine"</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="portfolio-item">
-                            <h3>Character Design</h3>
-                            <p>2019-2021: Concept artist for animation studio</p>
-                        </div>
-                    </li>
-                </ol>
-            </section>
-
-            <section>
-                <h2>Art Techniques Glossary</h2>
-                <dl>
-                    <dt>Digital Painting</dt>
-                    <dd>Creating artwork using digital tools while maintaining a traditional art feel</dd>
-                    
-                    <dt>Mixed Media</dt>
-                    <dd>Combining multiple artistic mediums in a single piece</dd>
-                    
-                    <dt>Character Design</dt>
-                    <dd>The art of creating memorable and expressive characters for various media</dd>
-                </dl>
-            </section>
-        </article>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Ava's Illustration Portfolio. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+export default ArtPortfolioPreview;
