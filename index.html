@@ -1,11 +1,91 @@
-/* File Structure */
-root/
-  ├── index.html
-  ├── images/
-  ├── about/
-  │   └── about.html
-  └── resume/
-      └── resume.html
+/* styles.css (create this in your root folder) */
+:root {
+    --olive: #556B2F;
+    --light-olive: #6B8E23;
+    --cream: #FFFFF0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: var(--cream);
+    color: var(--olive);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--olive);
+    color: var(--cream);
+    padding: 2rem;
+    text-align: center;
+}
+
+nav {
+    padding: 1rem;
+    background-color: var(--light-olive);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: opacity 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 2px solid var(--olive);
+}
+
+article {
+    margin-bottom: 3rem;
+}
+
+h1, h2, h3 {
+    color: var(--olive);
+}
+
+footer {
+    background-color: var(--olive);
+    color: var(--cream);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.portfolio-item {
+    border: 1px solid var(--olive);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
 
 /* index.html */
 <!DOCTYPE html>
@@ -13,39 +93,37 @@ root/
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ava's Portfolio</title>
+    <title>Ava's Illustration Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Welcome to Ava's Portfolio</h1>
+        <h1>Ava</h1>
+        <p>Illustrator & Visual Artist</p>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Gallery</a></li>
                 <li><a href="about/about.html">About</a></li>
-                <li><a href="resume/resume.html">Resume</a></li>
+                <li><a href="resume/resume.html">Portfolio</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <article>
-            <h2>Introduction</h2>
-            <p>Welcome to my personal website. I'm passionate about web development and creating meaningful digital experiences.</p>
-            
-            <section>
-                <h3>My Journey</h3>
-                <p>Throughout my career, I've focused on <strong>innovative solutions</strong> and <em>creative problem-solving</em>. This website showcases my work and experiences.</p>
-            </section>
-
-            <section>
-                <h3>What I Do</h3>
-                <p>I specialize in front-end development, with expertise in HTML, CSS, and JavaScript. My goal is to create intuitive and accessible web experiences.</p>
-            </section>
+            <h2>Featured Works</h2>
+            <div class="gallery">
+                <img src="images/placeholder1.jpg" alt="Illustration piece 1">
+                <img src="images/placeholder2.jpg" alt="Illustration piece 2">
+                <img src="images/placeholder3.jpg" alt="Illustration piece 3">
+                <img src="images/placeholder4.jpg" alt="Illustration piece 4">
+            </div>
         </article>
     </main>
 
     <footer>
-        <p>&copy; 2025 Ava's Portfolio. All rights reserved.</p>
+        <p>&copy; 2025 Ava's Illustration Portfolio. All rights reserved.</p>
     </footer>
 </body>
 </html>
@@ -56,41 +134,43 @@ root/
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Ava's Portfolio</title>
+    <title>About - Ava's Illustration Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
+        <h1>About Me</h1>
         <nav>
             <ul>
-                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html">Gallery</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="../resume/resume.html">Resume</a></li>
+                <li><a href="../resume/resume.html">Portfolio</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <article>
-            <h1>About Me</h1>
             <section>
-                <h2>My Background</h2>
-                <p>I'm a <strong>web developer</strong> with a passion for creating beautiful and functional websites. My journey began when I first discovered the power of HTML and CSS.</p>
+                <h2>My Artistic Journey</h2>
+                <p>As an <strong>illustrator</strong>, I focus on creating vibrant and meaningful visual narratives. My work combines traditional techniques with digital innovation, bringing stories to life through careful attention to detail and emotional depth.</p>
             </section>
 
             <section>
-                <h2>Skills & Expertise</h2>
-                <p>Over the years, I've developed expertise in various <em>web technologies</em> and frameworks. I believe in continuous learning and staying updated with industry trends.</p>
+                <h2>Artistic Philosophy</h2>
+                <p>I believe in the power of <em>visual storytelling</em> to connect, inspire, and transform. Each piece I create aims to capture a moment, emotion, or story that resonates with viewers on a personal level.</p>
             </section>
 
             <section>
-                <h2>Personal Interests</h2>
-                <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with fellow developers.</p>
+                <h2>Medium & Style</h2>
+                <p>My illustrations blend traditional and digital techniques, with a particular focus on color theory and composition. I specialize in creating detailed, narrative-driven pieces that invite viewers to explore and interpret.</p>
             </section>
         </article>
     </main>
 
     <footer>
-        <p>&copy; 2025 Ava's Portfolio. All rights reserved.</p>
+        <p>&copy; 2025 Ava's Illustration Portfolio. All rights reserved.</p>
     </footer>
 </body>
 </html>
@@ -101,69 +181,76 @@ root/
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Ava's Portfolio</title>
+    <title>Portfolio - Ava's Illustration Work</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
+        <h1>Portfolio</h1>
         <nav>
             <ul>
-                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html">Gallery</a></li>
                 <li><a href="../about/about.html">About</a></li>
-                <li><a href="resume.html">Resume</a></li>
+                <li><a href="resume.html">Portfolio</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <article>
-            <h1>Professional Resume</h1>
-            
             <section>
-                <h2>Skills</h2>
+                <h2>Artistic Skills</h2>
                 <ul>
-                    <li>HTML5 and CSS3</li>
-                    <li>JavaScript & Modern Frameworks</li>
-                    <li>Responsive Web Design</li>
-                    <li>Version Control (Git)</li>
+                    <li>Digital Illustration</li>
+                    <li>Traditional Media (Watercolor, Ink)</li>
+                    <li>Character Design</li>
+                    <li>Editorial Illustration</li>
                 </ul>
             </section>
 
             <section>
-                <h2>Experience</h2>
+                <h2>Featured Projects</h2>
                 <ol>
                     <li>
-                        <h3>Senior Web Developer</h3>
-                        <p>2023-Present</p>
+                        <div class="portfolio-item">
+                            <h3>Children's Book Series</h3>
+                            <p>2023-Present: Lead illustrator for "Adventures in Wonderland" series</p>
+                        </div>
                     </li>
                     <li>
-                        <h3>Frontend Developer</h3>
-                        <p>2021-2023</p>
+                        <div class="portfolio-item">
+                            <h3>Editorial Illustrations</h3>
+                            <p>2021-2023: Regular contributor to "The Creative Magazine"</p>
+                        </div>
                     </li>
                     <li>
-                        <h3>Junior Developer</h3>
-                        <p>2019-2021</p>
+                        <div class="portfolio-item">
+                            <h3>Character Design</h3>
+                            <p>2019-2021: Concept artist for animation studio</p>
+                        </div>
                     </li>
                 </ol>
             </section>
 
             <section>
-                <h2>Technical Glossary</h2>
+                <h2>Art Techniques Glossary</h2>
                 <dl>
-                    <dt>HTML5</dt>
-                    <dd>The latest version of Hypertext Markup Language, used for structuring web content.</dd>
+                    <dt>Digital Painting</dt>
+                    <dd>Creating artwork using digital tools while maintaining a traditional art feel</dd>
                     
-                    <dt>CSS3</dt>
-                    <dd>The latest standard of Cascading Style Sheets, used for styling web pages.</dd>
+                    <dt>Mixed Media</dt>
+                    <dd>Combining multiple artistic mediums in a single piece</dd>
                     
-                    <dt>JavaScript</dt>
-                    <dd>A programming language that enables interactive web functionality.</dd>
+                    <dt>Character Design</dt>
+                    <dd>The art of creating memorable and expressive characters for various media</dd>
                 </dl>
             </section>
         </article>
     </main>
 
     <footer>
-        <p>&copy; 2025 Ava's Portfolio. All rights reserved.</p>
+        <p>&copy; 2025 Ava's Illustration Portfolio. All rights reserved.</p>
     </footer>
 </body>
 </html>
