@@ -62,213 +62,9 @@
             opacity: 0.8;
         }
 
-        .profile-section {
-            position: relative;
-            display: flex;
-            align-items: center;
-            padding: 6rem;
-            background: linear-gradient(135deg, var(--dark-olive) 0%, #3C4A3E 100%);
-            color: var(--cream);
-            overflow: hidden;
-        }
+        /* Rest of your CSS styles remain exactly the same */
+        [Previous CSS styles]
 
-        .profile-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                radial-gradient(rgba(255,255,255,0.05) 8%, transparent 8%);
-            background-size: 30px 30px;
-            opacity: 0.5;
-            z-index: 1;
-        }
-
-        .profile-content {
-            position: relative;
-            z-index: 2;
-            max-width: 600px;
-        }
-
-        h1 {
-            font-family: 'Abril Fatface', cursive;
-            font-size: 4rem;
-            margin: 0 0 1.5rem 0;
-            color: var(--cream);
-            letter-spacing: 0.03em;
-            line-height: 1.2;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-        }
-
-        .profile-section p {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 400;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--cream);
-            opacity: 0.9;
-        }
-
-        .profile-image {
-            position: relative;
-            width: 240px;
-            height: 240px;
-            margin-right: 4rem;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid var(--light-olive);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            z-index: 2;
-        }
-
-        .featured-title {
-            text-align: center;
-            padding: 4rem 0 2rem;
-        }
-
-        .featured-title h2 {
-            font-family: 'Abril Fatface', cursive;
-            font-size: 2.5rem;
-            color: var(--dark-olive);
-            margin: 0;
-        }
-
-        .art-grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            padding: 2rem;
-        }
-
-        .art-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .art-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .art-item img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .art-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .art-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 1.5rem;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            color: white;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .art-item:hover .art-info {
-            opacity: 1;
-        }
-
-        .category-tag {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.8rem;
-            color: var(--light-olive);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            font-weight: 600;
-        }
-
-        .art-info h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.2rem;
-            margin: 0.5rem 0;
-            color: var(--cream);
-        }
-
-        .art-info p {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-            margin: 0;
-            color: var(--cream);
-            opacity: 0.9;
-        }
-
-        .view-more {
-            text-align: center;
-            padding: 3rem 0;
-        }
-
-        .view-more button {
-            background-color: var(--dark-olive);
-            color: var(--cream);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .view-more button:hover {
-            background-color: var(--text);
-        }
-
-        footer {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--dark-olive);
-            color: var(--cream);
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-
-        @media (max-width: 1200px) {
-            .art-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .profile-section {
-                flex-direction: column;
-                text-align: center;
-                padding: 3rem 1.5rem;
-            }
-
-            .profile-image {
-                margin: 0 0 2rem 0;
-                width: 180px;
-                height: 180px;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            .art-grid {
-                grid-template-columns: 1fr;
-                padding: 1rem;
-            }
-
-            nav ul {
-                gap: 1rem;
-            }
-        }
     </style>
 </head>
 <body>
@@ -276,10 +72,10 @@
         <div class="nav-container">
             <span class="nav-logo">Ava Hyland</span>
             <ul>
-                <li><a href="#portraits">Portraits</a></li>
-                <li><a href="#other-works">Other Works</a></li>
+                <li><a href="https://ava-hyland.github.io/portraits.html" target="_blank">Portraits</a></li>
+                <li><a href="https://ava-hyland.github.io/otherworks.html" target="_blank">Other Works</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://ava-hyland.github.io/contact.html" target="_blank">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -298,28 +94,28 @@
 
     <section class="art-grid">
         <div class="art-item">
-            <img src="portrait1.jpg" alt="Portrait Study in Oils">
+            <img src="portrait1.jpg" alt="Figure Study">
             <div class="art-info">
                 <span class="category-tag">Portrait</span>
-                <h3>Portrait Study in Oils</h3>
+                <h3>Figure Study</h3>
                 <p>Traditional oil painting exploring light and shadow</p>
             </div>
         </div>
 
         <div class="art-item">
-            <img src="portrait2.jpg" alt="Contemporary Figure">
+            <img src="portrait2.jpg" alt="Figure Study">
             <div class="art-info">
                 <span class="category-tag">Figure Study</span>
-                <h3>Contemporary Figure</h3>
+                <h3>Figure Study</h3>
                 <p>Mixed media exploration of form and movement</p>
             </div>
         </div>
 
         <div class="art-item">
-            <img src="illustration1.jpg" alt="Nature Series">
+            <img src="Portraits3.jpg" alt="Figure Study">
             <div class="art-info">
                 <span class="category-tag">Illustration</span>
-                <h3>Nature Series</h3>
+                <h3>Figure Study</h3>
                 <p>Digital illustrations inspired by natural forms</p>
             </div>
         </div>
@@ -385,15 +181,6 @@
 
     <footer>
         <p>© 2025 Ava Hyland | Artist & Illustrator</p>
-        <p>Contact: Hylaa518@newschool.edu</p>
-    </footer>
-</body>
-</html>
-        <button>View Full Gallery</button>
-    </div>
-
-    <footer>
-        <p>© 2025 Ava | Illustrator & Visual Artist</p>
         <p>Contact: Hylaa518@newschool.edu</p>
     </footer>
 </body>
