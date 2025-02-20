@@ -4,180 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ava Hyland - Art & Illustration</title>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --dark-olive: #556B2F;
-            --light-olive: #8DA290;
-            --cream: #FFFFF0;
-            --bg: #FAFAFA;
-            --text: #3C4A3E;
-        }
-        
-        body {
-            margin: 0;
-            font-family: 'Playfair Display', serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-        }
-
-        nav {
-            background-color: var(--dark-olive);
-            color: var(--cream);
-            padding: 1rem 0;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-family: 'Abril Fatface', cursive;
-            font-size: 1.5rem;
-            color: var(--cream);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li a {
-            color: var(--cream);
-            text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
-            cursor: pointer;
-        }
-
-        nav ul li a:hover {
-            opacity: 0.8;
-        }
-
-        /* Rest of your CSS styles remain exactly the same */
-        [Previous CSS styles]
-
-    </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <span class="nav-logo">Ava Hyland</span>
-            <ul>
-                <li><a href="https://ava-hyland.github.io/portraits.html" target="_blank">Portraits</a></li>
-                <li><a href="https://ava-hyland.github.io/otherworks.html" target="_blank">Other Works</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="https://ava-hyland.github.io/contact.html" target="_blank">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <section class="profile-section">
-        <img src="profile.jpg" alt="Ava Hyland" class="profile-image">
-        <div class="profile-content">
-            <h1>Ava Hyland</h1>
-            <p>New York based visual artist and illustrator, Ava Hyland, has been honing her illustration abilities all her life. Originally focused more in design, Ava was able to blend her knowledge of design, and passion for art in a perfect union. She focuses in furniture design, alongside portraiture work. Ava currently is in her undergrad at Parsons School of Design focusing in Illustration. When she's not working, she loves spending time with her cats, spending time going to concerts, and walk dogs around her neighborhood.</p>
-        </div>
-    </section>
-
-    <div class="featured-title">
-        <h2>Featured Works</h2>
-    </div>
-
-    <section class="art-grid">
-        <div class="art-item">
-            <img src="portrait1.jpg" alt="Figure Study">
-            <div class="art-info">
-                <span class="category-tag">Portrait</span>
-                <h3>Figure Study</h3>
-                <p>Traditional oil painting exploring light and shadow</p>
+    <header>
+        <nav>
+            <div>
+                <span>Ava Hyland</span>
+                <ul>
+                    <li><a href="portraits.html">Portraits</a></li>
+                    <li><a href="otherworks.html">Other Works</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
-        </div>
+        </nav>
+    </header>
 
-        <div class="art-item">
-            <img src="portrait2.jpg" alt="Figure Study">
-            <div class="art-info">
-                <span class="category-tag">Figure Study</span>
-                <h3>Figure Study</h3>
-                <p>Mixed media exploration of form and movement</p>
+    <main>
+        <section id="profile">
+            <img src="profile.jpg" alt="Ava Hyland">
+            <div>
+                <h1>Ava Hyland</h1>
+                <p>New York based visual artist and illustrator, Ava Hyland, has been honing her illustration abilities all her life. Originally focused more in design, Ava was able to blend her knowledge of design, and passion for art in a perfect union. She focuses in furniture design, alongside portraiture work. Ava currently is in her undergrad at Parsons School of Design focusing in Illustration. When she's not working, she loves spending time with her cats, spending time going to concerts, and walk dogs around her neighborhood.</p>
             </div>
-        </div>
+        </section>
 
-        <div class="art-item">
-            <img src="Portraits3.jpg" alt="Figure Study">
-            <div class="art-info">
-                <span class="category-tag">Illustration</span>
-                <h3>Figure Study</h3>
-                <p>Digital illustrations inspired by natural forms</p>
+        <section id="portfolio">
+            <h2>Featured Works</h2>
+            
+            <div>
+                <article>
+                    <img src="portrait1.jpg" alt="Figure Study">
+                    <div>
+                        <span>Portrait</span>
+                        <h3>Figure Study</h3>
+                        <p>Traditional oil painting exploring light and shadow</p>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="portrait2.jpg" alt="Figure Study">
+                    <div>
+                        <span>Figure Study</span>
+                        <h3>Figure Study</h3>
+                        <p>Mixed media exploration of form and movement</p>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="Portraits3.jpg" alt="Figure Study">
+                    <div>
+                        <span>Illustration</span>
+                        <h3>Figure Study</h3>
+                        <p>Digital illustrations inspired by natural forms</p>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="portrait3.jpg" alt="Character Study">
+                    <div>
+                        <span>Portrait</span>
+                        <h3>Character Study</h3>
+                        <p>Exploring personality through portraiture</p>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="sketch1.jpg" alt="Figure Sketches">
+                    <div>
+                        <span>Sketches</span>
+                        <h3>Figure Sketches</h3>
+                        <p>Quick studies in charcoal and graphite</p>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="mixed1.jpg" alt="Mixed Media Composition">
+                    <div>
+                        <span>Mixed Media</span>
+                        <h3>Mixed Media Composition</h3>
+                        <p>Experimental piece combining traditional and digital techniques</p>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="portrait4.jpg" alt="Self Portrait">
+                    <div>
+                        <span>Portrait</span>
+                        <h3>Self Portrait</h3>
+                        <p>Personal exploration in oils</p>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="illustration2.jpg" alt="Editorial Piece">
+                    <div>
+                        <span>Illustration</span>
+                        <h3>Editorial Piece</h3>
+                        <p>Commissioned work for publication</p>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="portrait5.jpg" alt="Portrait Commission">
+                    <div>
+                        <span>Portrait</span>
+                        <h3>Portrait Commission</h3>
+                        <p>Custom portrait in classic style</p>
+                    </div>
+                </article>
             </div>
-        </div>
 
-        <div class="art-item">
-            <img src="portrait3.jpg" alt="Character Study">
-            <div class="art-info">
-                <span class="category-tag">Portrait</span>
-                <h3>Character Study</h3>
-                <p>Exploring personality through portraiture</p>
+            <div>
+                <button>View Full Gallery</button>
             </div>
-        </div>
-
-        <div class="art-item">
-            <img src="sketch1.jpg" alt="Figure Sketches">
-            <div class="art-info">
-                <span class="category-tag">Sketches</span>
-                <h3>Figure Sketches</h3>
-                <p>Quick studies in charcoal and graphite</p>
-            </div>
-        </div>
-
-        <div class="art-item">
-            <img src="mixed1.jpg" alt="Mixed Media Composition">
-            <div class="art-info">
-                <span class="category-tag">Mixed Media</span>
-                <h3>Mixed Media Composition</h3>
-                <p>Experimental piece combining traditional and digital techniques</p>
-            </div>
-        </div>
-
-        <div class="art-item">
-            <img src="portrait4.jpg" alt="Self Portrait">
-            <div class="art-info">
-                <span class="category-tag">Portrait</span>
-                <h3>Self Portrait</h3>
-                <p>Personal exploration in oils</p>
-            </div>
-        </div>
-
-        <div class="art-item">
-            <img src="illustration2.jpg" alt="Editorial Piece">
-            <div class="art-info">
-                <span class="category-tag">Illustration</span>
-                <h3>Editorial Piece</h3>
-                <p>Commissioned work for publication</p>
-            </div>
-        </div>
-
-        <div class="art-item">
-            <img src="portrait5.jpg" alt="Portrait Commission">
-            <div class="art-info">
-                <span class="category-tag">Portrait</span>
-                <h3>Portrait Commission</h3>
-                <p>Custom portrait in classic style</p>
-            </div>
-        </div>
-    </section>
-
-    <div class="view-more">
-        <button>View Full Gallery</button>
-    </div>
+        </section>
+    </main>
 
     <footer>
         <p>© 2025 Ava Hyland | Artist & Illustrator</p>
