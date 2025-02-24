@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artworks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 32px;
+        }
+        .artwork-list {
+            margin-bottom: 30px;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .image-container {
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+        }
+        .image-caption {
+            margin-top: 5px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1><strong>ARTWORKS</strong></h1>
+    
+    <div class="artwork-list">
+        <h2>List of Works:</h2>
+        <ul>
+            <li>Xenia and Mia (2024)</li>
+            <li>Amethyst and Jay (2023)</li>
+            <li>Chromatic Dreams (2024)</li>
+            <li>Urban Flow (2023)</li>
+            <li>Fragments (2023)</li>
+        </ul>
+    </div>
+    
+    <div class="image-gallery">
+        <div class="image-container">
+            <img src="xeniaandmia.jpg" alt="Xenia and Mia - Pen drawing of two people eating at a table">
+            <p class="image-caption">Xenia and Mia (2024) - Pen drawing</p>
+        </div>
+        
+        <div class="image-container">
+            <img src="amethystandjay.jpg" alt="Amethyst and Jay - Pen drawing">
+            <p class="image-caption">Amethyst and Jay (2023) - Pen drawing</p>
+        </div>
+        
+        <div class="image-container">
+            <img src="/api/placeholder/400/300" alt="Chromatic Dreams artwork">
+            <p class="image-caption">Chromatic Dreams (2024) - Digital illustration</p>
+        </div>
+        
+        <div class="image-container">
+            <img src="/api/placeholder/400/300" alt="Urban Flow artwork">
+            <p class="image-caption">Urban Flow (2023) - Digital composition</p>
+        </div>
+        
+        <div class="image-container">
+            <img src="/api/placeholder/400/300" alt="Fragments artwork">
+            <p class="image-caption">Fragments (2023) - Mixed media installation</p>
+        </div>
+    </div>
+</body>
+</html>
