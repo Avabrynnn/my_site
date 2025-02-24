@@ -3,168 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Ava Hyland</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./artworks.html">Artworks</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Welcome to Ava Hyland's Portfolio</h1>
-        <section>
-            <h2>Featured Work</h2>
-            <p>Explore my latest artistic creations and projects.</p>
-            <div class="featured-works">
-                <!-- Placeholder for featured works -->
-                <p>Featured artwork samples will be displayed here.</p>
-                <a href="./artworks.html">View All Works</a>
-            </div>
-        </section>
-        <section>
-            <h2>Latest News</h2>
-            <article>
-                <h3>New Exhibition Opening</h3>
-                <p>My new collection will be on display at the Urban Gallery starting March 15, 2025.</p>
-            </article>
-        </section>
-    </main>
-    <footer>
-        <p>© 2025 Ava Hyland</p>
-    </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Ava Hyland</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./artworks.html">Artworks</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>About Ava Hyland</h1>
-        <section class="bio">
-            <h2>Biography</h2>
-            <p>Ava Hyland is a contemporary artist based in New York City, specializing in mixed media and digital art. Currently studying at The New School, Ava's work explores themes of identity, technology, and environmental consciousness.</p>
-            <p>With a background in traditional painting techniques and a growing interest in digital media, Ava creates pieces that bridge the gap between conventional art forms and new technological possibilities.</p>
-        </section>
-        <section class="education">
-            <h2>Education</h2>
-            <ul>
-                <li>BFA in Fine Arts, The New School, New York (Expected 2026)</li>
-                <li>Summer Intensive Program, School of Visual Arts, 2023</li>
-            </ul>
-        </section>
-        <section class="exhibitions">
-            <h2>Selected Exhibitions</h2>
-            <ul>
-                <li>2024: "Digital Landscapes," Student Gallery, The New School</li>
-                <li>2023: "Emerging Artists Showcase," Community Arts Center</li>
-                <li>2022: "First Light," Group Exhibition, Local Gallery</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>© 2025 Ava Hyland</p>
-    </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artworks - Ava Hyland</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./artworks.html">Artworks</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Artworks</h1>
-        <section class="portfolio-nav">
-            <h2>Categories</h2>
-            <ul>
-                <li><a href="#digital">Digital Art</a></li>
-                <li><a href="#paintings">Paintings</a></li>
-                <li><a href="#mixed-media">Mixed Media</a></li>
-            </ul>
-        </section>
+    <title>Amethyst Martinez - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
         
-        <section id="digital" class="gallery">
-            <h2>Digital Art</h2>
-            <div class="artwork-grid">
-                <div class="artwork-item">
-                    <h3>Chromatic Dreams</h3>
-                    <p>Digital illustration, 2024</p>
-                    <p>This piece explores the intersection of consciousness and technology.</p>
-                </div>
-                <div class="artwork-item">
-                    <h3>Urban Flow</h3>
-                    <p>Digital composition, 2023</p>
-                    <p>A meditation on city life and movement through urban spaces.</p>
-                </div>
-            </div>
-        </section>
+        body {
+            font-family: 'Courier Prime', monospace;
+        }
         
-        <section id="paintings" class="gallery">
-            <h2>Paintings</h2>
-            <div class="artwork-grid">
-                <div class="artwork-item">
-                    <h3>Spring Awakening</h3>
-                    <p>Acrylic on canvas, 2024</p>
-                    <p>Exploration of color and organic forms inspired by seasonal change.</p>
-                </div>
-                <div class="artwork-item">
-                    <h3>Stillness</h3>
-                    <p>Oil on panel, 2023</p>
-                    <p>A study in minimalism and negative space.</p>
-                </div>
-            </div>
-        </section>
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
         
-        <section id="mixed-media" class="gallery">
-            <h2>Mixed Media</h2>
-            <div class="artwork-grid">
-                <div class="artwork-item">
-                    <h3>Fragments</h3>
-                    <p>Found objects and acrylic, 2024</p>
-                    <p>Commentary on consumption and waste in modern society.</p>
-                </div>
-                <div class="artwork-item">
-                    <h3>Memory Palace</h3>
-                    <p>Photography, ink, and digital elements, 2023</p>
-                    <p>An exploration of personal history and collective memory.</p>
+        .portfolio-item {
+            transition: transform 0.2s ease;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateX(10px);
+        }
+    </style>
+</head>
+<body class="bg-yellow-50 text-black">
+    <section class="border-b-2 border-black">
+        <div class="max-w-6xl mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center md:items-start gap-8">
+            <img src="headshot.jpg" alt="Amethyst Martinez" class="w-48 h-48 md:w-56 md:h-56 object-cover border-2 border-black">
+            <div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Amethyst Martinez</h1>
+                <p class="text-lg leading-relaxed mb-6">
+                    Amethyst is a journalist who has a keen interest in telling the stories of underserved communities. She has interned at NJ.com and the Star-Ledger, the Austin American-Statesman, Delaware Online and the News Journal, Barron's, and most recently, The Daily Beast, where she has been working since October 2024. Last year, she served as the executive editor of her campus newspaper, The Rider News. She is currently a Data Journalism master's student at Columbia University, and is based in New York City. Reach her at amethystmartinez22@gmail.com.
+                </p>
+                <div>
+                    <a href="https://github.com/amethystmart" target="_blank" class="inline-block border-2 border-black px-6 py-2 hover:bg-black hover:text-white transition-colors">GitHub</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <main class="max-w-6xl mx-auto px-6 py-16">
+        <div class="portfolio-grid">
+            <div class="portfolio-item border border-black p-6 bg-yellow-50">
+                <span class="text-sm font-bold">Delaware Online</span>
+                <h3 class="text-xl font-bold mt-2 mb-3">The Story of Charles 'Bobby' Steele</h3>
+                <p class="mb-4">A revealing investigative piece about the mysterious disappearance and death of a man in Delaware.</p>
+                <a href="https://www.delawareonline.com/story/news/local/2024/04/08/charles-bobby-steele-glasgow-alum-missing-death-claymont-wilmington-delaware-elkton-maryland/72900838007/" target="_blank" class="underline">Read Article →</a>
+            </div>
+
+            <div class="portfolio-item border border-black p-6">
+                <span class="text-sm font-bold">Austin American-Statesman</span>
+                <h3 class="text-xl font-bold mt-2 mb-3">Remembering James Hendricks</h3>
+                <p class="mb-4">A deeply personal narrative about Austin native James Hendricks' life and tragic death at Arches National Park.</p>
+                <a href="https://www.statesman.com/story/news/local/2023/08/20/austin-texas-james-hendricks-died-utah-arches-national-park-ruth-hendricks-brough/70590981007/" target="_blank" class="underline">Read Article →</a>
+            </div>
+
+            <div class="portfolio-item border border-black p-6">
+                <span class="text-sm font-bold">The Rider News</span>
+                <h3 class="text-xl font-bold mt-2 mb-3">Title IX Investigation</h3>
+                <p class="mb-4">An investigative report exposing delays and unresolved Title IX cases at Rider University, highlighting systemic issues in handling sexual misconduct complaints.</p>
+                <a href="https://theridernews.com/title-ix-failures-rider-students-unresolved-cases-linger/" target="_blank" class="underline">Read Investigation →</a>
+            </div>
+
+            <div class="portfolio-item border border-black p-6">
+                <span class="text-sm font-bold">The Daily Beast</span>
+                <h3 class="text-xl font-bold mt-2 mb-3">Person of Interest: Luigi Mangione's Loved Ones Expressed Concern</h3>
+                <p class="mb-4">An exclusive breaking news piece exploring Luigi Mangione's social media history.</p>
+                <a href="https://www.thedailybeast.com/person-of-interest-luigi-mangiones-loved-ones-expressed-concern-about-him-before-killing-are-y/" target="_blank" class="underline">Read Article →</a>
+            </div>
+
+            <div class="portfolio-item border border-black p-6">
+                <span class="text-sm font-bold">Austin American-Statesman</span>
+                <h3 class="text-xl font-bold mt-2 mb-3">Austin Pride Carries On Despite Scalding Heat</h3>
+                <p class="mb-4">A compelling coverage of Austin's Pride event, highlighting resilience and community spirit in the face of challenging circumstances.</p>
+                <a href="https://www.statesman.com/story/news/2023/08/13/austin-pride-carries-on-despite-scalding-heat-and-contention/70584210007/" target="_blank" class="underline">Read Article →</a>
+            </div>
+
+            <div class="portfolio-item border border-black p-6">
+                <span class="text-sm font-bold">Personal Project</span>
+                <h3 class="text-xl font-bold mt-2 mb-3">NYC Rare Bird Sightings Tracker</h3>
+                <p class="mb-4">An automated web project developed during a coding course with Jonathan Soma, utilizing web scraping techniques to track and display rare bird sightings in New York City.</p>
+                <a href="https://amethystmart.github.io/bird_stuff/" target="_blank" class="underline">View Project →</a>
+            </div>
+
+            <div class="portfolio-item border border-black p-6">
+                <span class="text-sm font-bold">Data Analysis</span>
+                <h3 class="text-xl font-bold mt-2 mb-3">Ebb and Flow: America's Everchanging Views on Capital Punishment</h3>
+                <p class="mb-4">A data-driven analysis exploring how public opinion on the death penalty has fluctuated over five decades.</p>
+                <a href="death_penalty.html" class="underline">View Project →</a>
+            </div>
+
+            <div class="portfolio-item border border-black p-6">
+                <span class="text-sm font-bold">Data Analysis</span>
+                <h3 class="text-xl font-bold mt-2 mb-3">Stigma's Effect on the U.S. Mental Health Crisis</h3>
+                <p class="mb-4">How stigma plays a role in the U.S. mental health crisis.</p>
+                <a href="mentalhealth.html" class="underline">View Project →</a>
+            </div>
+        </div>
     </main>
-    <footer>
-        <p>© 2025 Ava Hyland</p>
+
+    <footer class="border-t-2 border-black py-8">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="mb-2">© 2025 Amethyst Martinez | Journalist & Data Storyteller</p>
+            <p>Contact: amethystmartinez22@gmail.com</p>
+        </div>
     </footer>
 </body>
 </html>
